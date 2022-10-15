@@ -1,10 +1,33 @@
-- 👋 Hi, I’m @karthic07
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+// C++ program to illustrate the above
+// given pattern of numbers.
+#include<bits/stdc++.h>
+using namespace std;
 
-<!---
-karthic07/karthic07 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+int main()
+{
+int n = 5, i, j, num = 1, gap;
+gap = n - 1;
+
+for ( j = 1 ; j <= n ; j++ )
+{
+    num = j;
+    for ( i = 1 ; i <= gap ; i++ )
+        cout << " ";
+
+    gap --;
+    for ( i = 1 ; i <= j ; i++ )
+    {
+        cout << num;
+        num++;
+    }
+    num--;
+    num--;
+    for ( i = 1 ; i < j ; i++)
+    {
+        cout << num;
+        num--;
+    }
+    cout << "\n";
+}
+return 0;
+}
